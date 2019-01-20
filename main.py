@@ -55,6 +55,6 @@ form = """
 @app.route("/")
 def index():
     #TODO return form variable
-    return rotate
+    return form
 
 app.run()
