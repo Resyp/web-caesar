@@ -26,20 +26,16 @@ form = """
         </style>
     </head>
     <body>
-      <form action="/add" method="POST">
+      <form action="/rotate" method="POST">
       ####Two inputs####
        <label>
             Rotate By:
-           <input type="text" name="rot"/>
+           <input type="text" name="rot" value="0"/>
         </label>
-        
+         <input type="submit" value="Submit Query"/>
         <input type="textarea" name="text"/>
-    ####The form uses the POST method.
-    There are two inputs: a regular input with type="text" and a textarea.
-    Set name="rot" on the input element and name="text" on the textarea.
-    Has a label on the input element that looks something like the one in the screenshot above.
-    The input element has the default value of 0.
-    Has a submit button.####
+    
+
 
     </body>
 </html>
@@ -59,6 +55,6 @@ form = """
 @app.route("/")
 def index():
     #TODO return form variable
-    return "Hello World"
+    return rotate
 
 app.run()
