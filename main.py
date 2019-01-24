@@ -28,13 +28,12 @@ form = """
         </style>
     </head>
     <body>
-      <form action="/rotate" method="POST">
-       <label>
-            Rotate By:
-           <input type="text" name="rot" value="0"/>
-        </label>
-         <input type="submit" value="Submit Query"/>
-        <textarea name="text">Enter text here...</textarea>
+      <form class="cipher-form" action ="/" method="POST">
+                    <textarea name="text" placeholder="Enter Message to Encrypt:">{0}</textarea>
+                    <label for "rot">Enter Amount to Rotate:</label>
+                    <input type="text" id="rot" name="rot" value="0">
+                    <input type="submit" value="Encrypt">
+                </form>
     
 
 
